@@ -19,19 +19,42 @@ SELECT ?cho (SAMPLE(?imageLink) AS ?imageLinkSample) ?title ?type ?yearSpan ?pla
 
 runQuery(endpoint, queryWeaponsJapan)
     .then(data => {
-        const properData = data;
+        const allData = data;
 
-        console.log(properData);
+        //console.log(allData);
+        getCategoriesFromData(allData);
+        itemsInCategory(allData); 
     });
 
-    function runQuery(url, query) {
-        return fetch(url + "?query=" + encodeURIComponent(query) + "&format=json")
-            .then(res => res.json())
-            .then(data => data.results.bindings)
-            .catch(error => {
-                console.log(error);
-            })
-    }
+// get categories from all data
+function getCategoriesFromData(allData) {
+    const categoryArray = allData
+        .map(item => {
+            return item.type.value
+                .toLowerCase()
+                .split(" ")[0]
+        })
+        .filter((item, index, self) => {
+            return self.indexOf(item) === index
+        })
+    console.log(categoryArray);
+}
 
 
+// get list per category
+function itemsInCategory(allData) {
+    const itemList = allData
+    .filter(item => item.type.value.includes("zwaard"));
+    //console.log(itemList);
+    
+}
 
+
+function runQuery(url, query) {
+    return fetch(url + "?query=" + encodeURIComponent(query) + "&format=json")
+        .then(res => res.json())
+        .then(data => data.results.bindings)
+        .catch(error => {
+            console.log(error);
+        })
+}
