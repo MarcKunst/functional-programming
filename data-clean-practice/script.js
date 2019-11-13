@@ -37,6 +37,7 @@ function getCategoriesFromData(allData) {
         .filter((item, index, self) => {
             return self.indexOf(item) === index
         })
+        
     console.log(categoryArray);
 }
 
@@ -44,8 +45,8 @@ function getCategoriesFromData(allData) {
 // get list per category
 function itemsInCategory(allData) {
     const itemList = allData
-    .filter(item => item.type.value.includes("zwaard"));
-    //console.log(itemList);
+    //.filter(item => item.type.value.includes("zwaard"));
+    console.log(itemList);
     
 }
 
@@ -58,3 +59,6 @@ function runQuery(url, query) {
             console.log(error);
         })
 }
+
+//d3
+
