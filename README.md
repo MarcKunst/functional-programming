@@ -13,6 +13,10 @@ _This website was commissioned by the [university of applied science](https://ww
 
 ![screenshot-functional-programming](https://user-images.githubusercontent.com/45428822/68870363-11001f00-06fb-11ea-918e-c1b65bc2ce06.png)
 
+### Data Cleaning
+
+Click [here](https://github.com/MarcKunst/functional-programming/wiki/2.-Cleaning-data) for my data cleaning practice documentation.
+
 ## Build status
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ab58b408-dcbd-4045-a959-1663b591fac3/deploy-status)](https://app.netlify.com/sites/weapons-of-japan/deploys)
