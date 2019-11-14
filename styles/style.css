@@ -24,10 +24,17 @@ circle:hover {
 }
 
 .tooltip {
+    background: #fdfdfd;
+    width: 100px;
+    height: 100px;
+    /* visibility: hidden; */
+}
+
+.tooltip-text{
     visibility: hidden;
 }
 
-.node:hover .tooltip {
+.node:hover .tooltip-text {
     visibility: visible;
 }
 

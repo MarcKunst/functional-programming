@@ -80,6 +80,8 @@ function d3Circles(nestedData){
     
     console.log(dataset)
     let diameter = 600;
+    let width = diameter / 10;
+    let height = diameter / 20;
 
         let bubble = d3.pack(dataset)
             .size([diameter, diameter])
@@ -126,9 +128,16 @@ function d3Circles(nestedData){
                 return d.r/3;
             });
 
+            // node.append("rect")
+            // .attr("dy", "-2em")
+            // .attr("class", "tooltip")
+            // .attr("width", width)
+            // .attr("height", height);
+            
+
             node.append("text")
             .attr("dy", "-2em")
-            .attr("class", "tooltip")
+            .attr("class", "tooltip-text")
             .text(function(d) {
                 return d.data.key + ": aantal: " + d.value;
             });
