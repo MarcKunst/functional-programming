@@ -1,0 +1,23 @@
+{
+  "name": "functional-programming",
+  "version": "1.0.0",
+  "description": "[![Netlify Status](https://api.netlify.com/api/v1/badges/ab58b408-dcbd-4045-a959-1663b591fac3/deploy-status)](https://app.netlify.com/sites/weapons-of-japan/deploys)",
+  "main": "index.js",
+  "dependencies": {
+    "d3": "^5.12.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcKunst/functional-programming.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarcKunst/functional-programming/issues"
+  },
+  "homepage": "https://github.com/MarcKunst/functional-programming#readme"
+}

@@ -1,0 +1,39 @@
+body {
+    background: url(../media/weapon-bg.png) #000000;
+    background-position: center;
+    background-size: cover;
+}
+
+h1 {
+    color: #fff;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 100;
+    text-align: center;
+}
+
+circle {
+    fill:  #0000006b;
+    stroke: #ffffffff;
+    stroke-width: 2;
+    transition: fill 0.5s ease;
+}
+
+circle:hover {
+    fill: #63636318;
+    stroke-width: 3;
+}
+
+.tooltip {
+    visibility: hidden;
+}
+
+.node:hover .tooltip {
+    visibility: visible;
+}
+
+text {
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-anchor: middle;
+    fill: #fdfdfd
+}
+
