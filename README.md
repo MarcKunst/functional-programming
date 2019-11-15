@@ -39,6 +39,11 @@ This app uses SPARQL to retrieve data from the museum's database. Here more info
 
 Thanks to the museum of volkenkunde for sharing their data. And thanks to my teachers and colleagues for their help during this project.
 
+The d3 example I used for this project was made by Alok K. Shukla. For more information see [link to his code](https://bl.ocks.org/alokkshukla/3d6be4be0ef9f6977ec6718b2916d168)
+
+I would like to thank my colleagues [Martijn Keesmaat](https://github.com/martijnkeesmaat), [Chazz Mannering](https://github.com/Chazzers) for helping me out.
+
+
 ## License
 
 Unless stated otherwise, code is [MIT](https://github.com/MarcKunst/functional-programming/blob/master/LICENSE)
