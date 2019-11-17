@@ -22,7 +22,7 @@ SELECT ?cho (SAMPLE(?imageLink) AS ?imageLinkSample) ?title ?type ?yearSpan ?pla
   	 #?newType skos:prefLabel ?typeLabel.
   FILTER langMatches(lang(?title), "ned")
 } ORDER BY ?cho
-`;
+`
 
 runQuery(endpoint, queryWeaponsJapan)
     .then(data => handleData(data)
@@ -35,6 +35,7 @@ runQuery(endpoint, queryWeaponsJapan)
 
         nestObjects(cleanedData)
         d3Circles(nestedData)
+        console.log(nestedData)
         // geef hier de data weer door aan de volgende functie
     }  
 
@@ -52,6 +53,7 @@ runQuery(endpoint, queryWeaponsJapan)
             yearSpan: data.yearSpan.value
         });
     }
+    // bovenstaande functie is in samenwerking met mijn klasgenoot Chazz
 
     function nestObjects(cleanedData) {
         const expensesByType = d3.nest()
@@ -77,11 +79,13 @@ function d3Circles(nestedData){
     const dataset = {
         children: nestedData
     };
-    
-    console.log(dataset)
-    let diameter = 600;
-    let width = diameter / 10;
-    let height = diameter / 20;
+
+//The code below is written by Alok K. Shukla
+// link to code: https://bl.ocks.org/alokkshukla/3d6be4be0ef9f6977ec6718b2916d168
+// I adjusted this code to my needs.
+console.log(dataset)
+    let diameter = 550;
+    let width = window.innerWidth;
 
         let bubble = d3.pack(dataset)
             .size([diameter, diameter])
@@ -92,6 +96,11 @@ function d3Circles(nestedData){
             .attr("width", diameter)
             .attr("height", diameter)
             .attr("class", "bubble");
+
+        svg.transition()
+            .delay(1100)
+            .duration(1000)
+            .attr("width", width);
 
         let nodes = d3.hierarchy(dataset)
             .sum(function(d) { return d.value; });
@@ -113,18 +122,33 @@ function d3Circles(nestedData){
                 return d.data.key + ": " + d.value;
             });
 
-        node.append("circle")
+        let circle = node.append("circle")
+        .attr("r", function(d) {
+            return d.r/1000;
+        });
+
+        circle.transition()
+            .delay(100)
+            .duration(900)
             .attr("r", function(d) {
                 return d.r;
             });
+            
         
         
-        node.append("text")
+        let text = node.append("text")
             .attr("dy", ".2em")
             .text(function(d) {
                 return d.data.key.substring(0, d.r / 3);
             })
             .attr("font-size", function(d){
+                return d.r/1000;
+            });
+
+            text.transition()
+            .delay(250)
+            .duration(900)
+            .attr("font-size", function(d) {
                 return d.r/3;
             });
 

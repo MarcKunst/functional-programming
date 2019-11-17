@@ -11,6 +11,11 @@ h1 {
     text-align: center;
 }
 
+svg.bubble {
+    display: block;
+    margin: auto;
+}
+
 circle {
     fill:  #0000006b;
     stroke: #ffffffff;
