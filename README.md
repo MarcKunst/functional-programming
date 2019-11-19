@@ -35,13 +35,17 @@ When you have installed node and npm it is time to get the app working. Follow t
 
 This app uses SPARQL to retrieve data from the museum's database. Here more information about [SPARQL](https://nl.wikipedia.org/wiki/SPARQL)
 
+Used query and explanation can be found on my [SPARQL query wiki page](https://github.com/MarcKunst/functional-programming/wiki/4.-Data-ophalen-met-SPARQL)
+
 ## Credits
 
 Thanks to the museum of volkenkunde for sharing their data. And thanks to my teachers and colleagues for their help during this project.
 
 The d3 example I used for this project was made by Alok K. Shukla. For more information see [link to his code](https://bl.ocks.org/alokkshukla/3d6be4be0ef9f6977ec6718b2916d168)
 
-I would like to thank my colleagues [Martijn Keesmaat](https://github.com/martijnkeesmaat), [Chazz Mannering](https://github.com/Chazzers) for helping me out.
+The background image that I use is a photo by [Maranda Vandergriff](https://unsplash.com/@mkvandergriff?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on Unsplash
+
+I would like to thank my colleagues [Martijn Keesmaat](https://github.com/martijnkeesmaat) for helping me understand the overall patterns of functional programming and [Chazz Mannering](https://github.com/Chazzers) for helping me out with a function that I use in my code
 
 
 ## License
