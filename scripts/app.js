@@ -100,7 +100,8 @@ console.log(dataset)
         svg.transition()
             .delay(1100)
             .duration(1000)
-            .attr("width", width);
+            .attr("width", width)
+            .ease(d3.easeBounce);
 
         let nodes = d3.hierarchy(dataset)
             .sum(function(d) { return d.value; });
@@ -132,7 +133,8 @@ console.log(dataset)
             .duration(900)
             .attr("r", function(d) {
                 return d.r;
-            });
+            })
+            .ease(d3.easeCircleOut);
             
         
         
@@ -146,11 +148,12 @@ console.log(dataset)
             });
 
             text.transition()
-            .delay(250)
+            .delay(450)
             .duration(900)
             .attr("font-size", function(d) {
                 return d.r/3;
-            });
+            })
+            .ease(d3.easeCubicOut);
 
             // node.append("rect")
             // .attr("dy", "-2em")
